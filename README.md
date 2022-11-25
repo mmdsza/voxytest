@@ -20,7 +20,8 @@ Onto the test.
 4. Changing the website's language should change the language of the "Support" widget. Context: ![Alt](/supportLanguage.png "Image explaining the undesired behavior.")
 5. Trying to log in with an unregistered email address should return an "invalid email" message.
 6. Trying to log in with an unregistered phone number should return an "invalid email" message.
-7. Uploading the same file multiple times should not be allowed on the support widget. Desired behavior: print a warning to the user reminding them that a similar file is already in place. Context: ![Alt](/multipleFiles.png "Image explaining the undesired behavior.")
+7. Uploading the same file multiple times should not be allowed on the support widget. 
+* Desired behavior: print out a warning message to the user reminding them that a similar file is already in place. Context: ![Alt](/multipleFiles.png "Image explaining the undesired behavior.")
 
 ## Mobile cases for basic login: 
 
@@ -33,11 +34,14 @@ For the sake of time and saving characters, mobile tests should be almost identi
 These are done assuming a valid ``` xxxx-xxxx-xxxx-xxxx ``` code.
 
 1. First name AND Last name fields should accomodate for special characters such as ```ç, ß, æ ``` and more. **This is a critical test**.
-2. Password field **must** comply to the rules provided. Assert that the rules on the image are followed such as the ```aA3bsz1@``` password is valid but the ```a``` isn't. Context: ![Alt](/password.png "Password field ruleset")
-2. Name fields should NOT be able to receive numbers as a valid response. Expected behavior: print a warning reminding the user that name fields should be characters only. Context: ![Alt](/numbersnames.png "Numbers on name fields should not be allowed.") **This is a critical test**
-2. Name fields should NOT be able to receive query statements OR should be ignored on the back-end of the application. Context: ![Alt](/sql.png "SQL query on name fields")
-3. If the code provided isn't valid, it should print an error to the user to let them know their code is not valid OR they miscopied it. **This is a critical test**
-3. Upon clicking Activate, if everything else is valid, the user account should be activated. **This is a critical test**.
+2. Password field **must** comply to the rules provided. Assert that the rules on the image are followed such as the ```aA3bsz1@``` password is valid but the ```a``` isn't. 
+  * Context: ![Alt](/password.png "Password field ruleset")
+4. Name fields should NOT be able to receive numbers as a valid response. Expected behavior: print a warning reminding the user that name fields should be characters only. 
+  * Context: ![Alt](/numbersnames.png "Numbers on name fields should not be allowed.") **This is a critical test**
+6. Name fields should NOT be able to receive query statements OR should be ignored on the back-end of the application. 
+  * Context: ![Alt](/sql.png "SQL query on name fields")
+8. If the code provided isn't valid, it should print an error to the user to let them know their code is not valid OR they miscopied it. **This is a critical test**
+9. Upon clicking Activate, if everything else is valid, the user account should be activated. **This is a critical test**.
 
 
 ## Mobile cases for the "I have a code" part:
